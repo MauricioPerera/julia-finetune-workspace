@@ -1,6 +1,7 @@
 # Julia Fine-tuning para Portable Agent Workspace
 
 **[Guía para usuarios](https://mauricioperera.github.io/julia-finetune-workspace/)** ·
+**[Guía técnica](https://mauricioperera.github.io/julia-finetune-workspace/technical.html)** ·
 **[Prompt de instalación asistida](https://mauricioperera.github.io/julia-finetune-workspace/prompt.md)** ·
 **[Versión 0.1.0](https://github.com/MauricioPerera/julia-finetune-workspace/releases/tag/v0.1.0)**
 
@@ -95,6 +96,9 @@ Cada idioma incluye instrucciones para la IA y evidencia de verificación traduc
 Para actualizar la página, edita `docs/index.html` y las traducciones en
 `docs/translations.json`, y ejecuta `python scripts/build_site.py`.
 El generador falla si falta la traducción de un texto de la página.
+La segunda página reúne arquitectura, contrato de datos, opciones CLI, artefactos,
+evaluación, integración y diagnóstico. Su contenido en los tres idiomas se mantiene
+en `scripts/build_technical.py`; `scripts/build_site.py` también la regenera.
 Los documentos `prompt.md` y `verification.md` de cada idioma se mantienen
 manualmente. Publica los archivos generados junto con los cambios de origen;
 GitHub Pages sirve `/docs` desde `main`.

@@ -5,6 +5,7 @@ Run after editing docs/index.html. Missing translations fail the build.
 import html
 import json
 import re
+import runpy
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -56,3 +57,4 @@ for locale in ('en', 'pt'):
 
 (DOCS / 'index.html').write_text(metadata(source, 'es'), encoding='utf-8', newline='\n')
 print('Built Spanish, English and Portuguese pages.')
+runpy.run_path(str(ROOT / 'scripts' / 'build_technical.py'), run_name='__main__')
