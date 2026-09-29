@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "workspace-julia-finetune"
+version = "0.1.0"
+requires-python = ">=3.11"
+description = "Agent-assisted, reproducible fine-tuning for Julia choice decisions"
+
+[project.scripts]
+julia-finetune = "julia_finetune.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["julia_finetune*"]

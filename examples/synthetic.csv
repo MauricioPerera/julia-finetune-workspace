@@ -1,0 +1,31 @@
+text,answer,group,language,origin
+El sistema de pedidos está caído.,urgente,urgente-0,es,synthetic
+Nadie puede acceder a la plataforma.,urgente,urgente-1,es,synthetic
+La caja está bloqueada y no podemos cobrar.,urgente,urgente-2,es,synthetic
+No podemos procesar ninguna venta.,urgente,urgente-3,es,synthetic
+El servicio dejó de funcionar para todos.,urgente,urgente-4,es,synthetic
+El equipo no puede trabajar por un fallo.,urgente,urgente-5,es,synthetic
+Los pedidos están detenidos por una avería.,urgente,urgente-6,es,synthetic
+Se bloqueó el acceso de todos los operadores.,urgente,urgente-7,es,synthetic
+No hay alternativa para continuar la operación.,urgente,urgente-8,es,synthetic
+Una caída impide atender a los clientes.,urgente,urgente-9,es,synthetic
+Actualiza el documento cuando puedas.,normal,normal-0,es,synthetic
+Quiero cambiar el color del panel.,normal,normal-1,es,synthetic
+Podemos revisar el informe la próxima semana.,normal,normal-2,es,synthetic
+Añade un filtro cuando tengas tiempo.,normal,normal-3,es,synthetic
+"Sin prisa, corrige el título del documento.",normal,normal-4,es,synthetic
+Necesito una copia del manual para mañana.,normal,normal-5,es,synthetic
+La operación funciona; propongo mejorar el diseño.,normal,normal-6,es,synthetic
+"No hay bloqueo, es una mejora futura.",normal,normal-7,es,synthetic
+Podemos esperar para modificar la plantilla.,normal,normal-8,es,synthetic
+Solicito una reunión para organizar mejoras.,normal,normal-9,es,synthetic
+No sé si la plataforma funciona.,revision,revision-0,es,synthetic
+Quizás exista un problema; falta confirmarlo.,revision,revision-1,es,synthetic
+"Dicen que es urgente, pero puede esperar.",revision,revision-2,es,synthetic
+Necesito ayuda y no sé explicar qué sucede.,revision,revision-3,es,synthetic
+Faltan datos sobre el impacto del incidente.,revision,revision-4,es,synthetic
+Un usuario dice que funciona y otro que no.,revision,revision-5,es,synthetic
+Tal vez esté bloqueado; no tengo información.,revision,revision-6,es,synthetic
+No conozco el estado actual del servicio.,revision,revision-7,es,synthetic
+Hay versiones contradictorias sobre el fallo.,revision,revision-8,es,synthetic
+No se ha confirmado si existe un bloqueo.,revision,revision-9,es,synthetic

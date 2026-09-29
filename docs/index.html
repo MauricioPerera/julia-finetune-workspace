@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Adapta Julia a tus decisiones con ejemplos y ayuda de una IA. Herramienta local de fine-tuning para usuarios sin conocimientos de programación.">
+  <meta name="theme-color" content="#132d2b">
+  <meta property="og:title" content="Julia · enseña tus criterios">
+  <meta property="og:description" content="De tus ejemplos a un modelo de decisiones. Instalación asistida por IA, entrenamiento local y resultados comprobables.">
+  <title>Julia Fine-tuning · Enseña tus criterios</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="shell topbar">
+    <a class="brand" href="#"><span class="mark" aria-hidden="true">j.</span>Julia <span class="brand-sub">fine-tuning</span></a>
+    <nav aria-label="Navegación principal"><a href="#como">Cómo funciona</a><a href="#ejemplos">Tus ejemplos</a><a href="#empezar">Empezar</a></nav>
+    <a class="repo" href="https://github.com/MauricioPerera/julia-finetune-workspace">GitHub ↗</a>
+  </header>
+  <main id="contenido">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> Primera versión · entrenamiento local</p>
+        <h1>Tu criterio.<br>Tus ejemplos.<br><em>Julia aprende.</em></h1>
+        <p class="intro">Adapta un modelo compacto para clasificar textos según tus reglas. Una IA te ayuda a instalar la herramienta, preparar los ejemplos y comprobar el resultado.</p>
+        <div class="actions"><a class="button primary" href="#empezar">Empezar con mi IA <span>↗</span></a><a class="button secondary" href="#como">Entender primero ↓</a></div>
+        <p class="small-note">No necesitas programar. Tu IA debe poder crear archivos y ejecutar comandos en tu equipo.</p>
+      </div>
+      <div class="demo" aria-label="Ejemplo ilustrativo de una clasificación">
+        <div class="demo-header"><span class="dot"></span> Un ejemplo de tu negocio <span class="tag">ilustrativo</span></div>
+        <div class="message"><span class="mini-label">MENSAJE</span><p>«El sistema está caído y nadie puede procesar pedidos».</p></div>
+        <div class="connector" aria-hidden="true">↓</div>
+        <div class="criteria"><span class="mini-label">TU CRITERIO</span><p>Un bloqueo operativo necesita atención inmediata.</p></div>
+        <div class="connector" aria-hidden="true">↓</div>
+        <div class="decision"><span class="mini-label">DECISIÓN ESPERADA</span><strong><span></span>Urgente</strong></div>
+        <div class="demo-footer">Tú defines qué es correcto.<br>El entrenamiento ajusta cómo decide el modelo.</div>
+      </div>
+    </section>
+    <section class="factbar shell" aria-label="Características"><div><strong>Compacto</strong><span>Julia-1 tiene 144,3 M de parámetros</span></div><div><strong>Sin GPU obligatoria</strong><span>Ruta inicial probada por CPU</span></div><div><strong>Con evidencia</strong><span>Compara el modelo antes y después</span></div></section>
+    <section class="section shell" id="como">
+      <div class="section-heading"><p class="eyebrow">QUÉ SIGNIFICA ENTRENARLO</p><h2>Aprender a elegir<br>con tus criterios.</h2><p>El fine-tuning ajusta un modelo que ya existe mediante ejemplos con una respuesta correcta. Julia elige entre las opciones que tú defines; no escribe respuestas libres.</p></div>
+      <div class="steps"><article><span class="step">01</span><h3>Define la decisión</h3><p>Escribe la pregunta y qué significa cada categoría. Por ejemplo: urgente, normal y revisión.</p></article><article><span class="step">02</span><h3>Enseña con ejemplos</h3><p>Entrega textos y la categoría correcta. La IA te ayuda a ordenar el archivo y detectar ambigüedades.</p></article><article><span class="step">03</span><h3>Entrena y compara</h3><p>La herramienta ajusta Julia y comprueba su comportamiento con ejemplos separados del entrenamiento.</p></article></div>
+      <div class="callout"><span aria-hidden="true">↳</span><p><strong>El modelo original se conserva.</strong> El resultado es una copia ajustada que puedes probar antes de decidir si te conviene usarla.</p></div>
+    </section>
+    <section class="dataset-section" id="ejemplos"><div class="shell dataset-grid">
+      <div><p class="eyebrow">EL PUNTO DE PARTIDA</p><h2>Una tabla sencilla.<br>Una respuesta por caso.</h2><p>Puedes empezar con una hoja de cálculo. Lo esencial es el texto y la categoría correcta. Un agente convierte el archivo al formato que necesita el entrenador.</p><a class="text-link" href="https://github.com/MauricioPerera/julia-finetune-workspace/blob/main/examples/synthetic.csv">Ver ejemplos sintéticos ↗</a></div>
+      <div class="table-card"><div class="table-top"><span class="file-icon" aria-hidden="true">▤</span> ejemplos.csv <span>VISTA ILUSTRATIVA</span></div><div class="table-scroll"><table><caption class="sr-only">Ejemplos ficticios y categorías esperadas</caption><thead><tr><th scope="col">Texto</th><th scope="col">Respuesta</th></tr></thead><tbody><tr><td>Nadie puede acceder al sistema.</td><td><span class="pill urgent">urgente</span></td></tr><tr><td>Actualiza el documento cuando puedas.</td><td><span class="pill normal">normal</span></td></tr><tr><td>Falta confirmar el impacto del fallo.</td><td><span class="pill review">revision</span></td></tr></tbody></table></div><p>Los datos mostrados son ficticios. Las categorías deben reflejar los criterios de tu negocio.</p></div>
+    </div></section>
+    <section class="section shell data-details"><article><span class="mini-label">¿SIN DATOS TODAVÍA?</span><h3>Puedes crear ejemplos sintéticos.</h3><p>La IA puede ayudarte a generar casos y tú revisas las respuestas. Son útiles para empezar; después necesitas casos reales reservados para medir cómo funciona en tu entorno.</p></article><article><span class="mini-label">¿VARIOS IDIOMAS?</span><h3>Inclúyelos en la evaluación.</h3><p>Julia parte de un modelo multilingüe. Ajustarlo para una tarea no garantiza conservar el rendimiento en todos los idiomas. Separa y compara resultados por idioma.</p></article></section>
+    <section class="start-section shell" id="empezar">
+      <div class="section-heading"><p class="eyebrow">INSTALACIÓN ASISTIDA</p><h2>Copia el mensaje.<br>Tu IA prepara el entorno.</h2><p>Abre una IA con acceso a tu terminal y archivos, como un agente de programación. Pega este mensaje y deja que siga el procedimiento de instalación y verificación.</p></div>
+      <div class="prompt-card"><div class="prompt-top"><span>MENSAJE PARA TU IA</span><button id="copy-prompt" type="button">Copiar instrucciones <span aria-hidden="true">⧉</span></button></div><pre id="agent-prompt">Lee y sigue este prompt para instalar y verificar mi herramienta de fine-tuning de Julia. Después ayúdame a preparar mis ejemplos:
+
+https://mauricioperera.github.io/julia-finetune-workspace/prompt.md</pre><p id="copy-status" role="status" aria-live="polite">La IA descargará una versión fija y comprobará el primer entrenamiento.</p></div>
+      <div class="requirements"><p><strong>Necesitas</strong> un equipo Windows o Linux, espacio para el modelo y su entorno, internet para la instalación y una IA que pueda ejecutar comandos.</p><p><strong>La IA se encarga</strong> de comprobar Python, crear el entorno aislado y leer los resultados. Si falta algo, te explica el impedimento.</p></div>
+      <div class="start-links"><a class="text-link" href="prompt.md">Leer el prompt completo ↗</a><a class="text-link" href="https://github.com/MauricioPerera/julia-finetune-workspace/releases/tag/v0.1.0">Descargar la versión 0.1.0 ↗</a><a class="text-link" href="https://mauricioperera.github.io/portable-agent-workspace-template/">Conocer el workspace opcional ↗</a></div>
+    </section>
+    <section class="section shell evidence-section">
+      <div><p class="eyebrow">QUÉ ESTÁ COMPROBADO</p><h2>Funciona.<br>La mejora se mide.</h2></div>
+      <div class="evidence-copy"><p>Probamos instalación aislada, entrenamiento con pesos reales, guardado, recarga y recuperación tras interrumpir el proceso. La integración opcional con el workspace funciona en Windows y Linux.</p><div class="result"><span>PRUEBA SINTÉTICA PEQUEÑA</span><strong>3/6 <small>antes</small><span aria-hidden="true">→</span>3/6 <small>después</small></strong><p>Confirmó el funcionamiento. No demostró una mejora de precisión.</p></div><p class="small-note">La ruta verificada ajusta los componentes de decisión por CPU. No hay una medición con datos reales de tu nicho ni una garantía de conservar todos los idiomas.</p><a class="text-link" href="verification.md">Leer la evidencia y sus límites ↗</a></div>
+    </section>
+    <section class="section shell faq"><p class="eyebrow">DUDAS HABITUALES</p><h2>Antes de empezar.</h2><details><summary>¿Necesito una tarjeta gráfica potente?</summary><p>No para la ruta inicial: se ha probado el entrenamiento por CPU. El tiempo y la memoria necesarios dependen del tamaño del dataset y de la longitud de los textos. El agente comprobará los recursos disponibles.</p></details><details><summary>¿Se entrena dentro de esta página?</summary><p>No. Esta página explica y entrega las instrucciones. El entrenamiento se ejecuta en tu equipo mediante Python y PyTorch.</p></details><details><summary>¿Qué puede aprender esta versión?</summary><p>Decisiones de selección: clasificar un texto entre las categorías que defines. Por ejemplo, prioridad o departamento responsable. No convierte Julia en un chatbot ni le añade generación de texto libre.</p></details><details><summary>¿Mis datos salen de mi equipo?</summary><p>El entrenador trabaja localmente y no envía los ejemplos a una API de entrenamiento. Si tu IA asistente es un servicio externo y le das acceso a los archivos, su tratamiento de esos datos depende de ese servicio.</p></details><details><summary>¿La IA decide qué respuestas son correctas?</summary><p>Puede proponer ejemplos y señalar inconsistencias. Los criterios y las etiquetas deben reflejar tus decisiones. Una respuesta inventada o ambigua puede enseñar el comportamiento equivocado.</p></details><details><summary>¿Necesito instalar el workspace?</summary><p>Es opcional. La herramienta funciona sola. El workspace permite conservar instrucciones, procedimientos y evidencia para que otra sesión de IA pueda continuar el trabajo.</p></details></section>
+  </main>
+  <footer class="shell"><a class="brand" href="#"><span class="mark" aria-hidden="true">j.</span>Julia fine-tuning</a><p>Herramienta independiente · No afiliada a Supersonic Labs.</p><div><a href="https://huggingface.co/SupersonicLabs/Julia-1">Modelo Julia-1 ↗</a><a href="https://github.com/MauricioPerera/julia-finetune-workspace">Código ↗</a></div></footer>
+</body>
+</html>

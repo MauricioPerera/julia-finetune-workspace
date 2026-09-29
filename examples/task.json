@@ -1,0 +1,8 @@
+{
+  "question": "¿Qué prioridad requiere esta solicitud?",
+  "categories": {
+    "urgente": "Un bloqueo operativo necesita atención inmediata.",
+    "normal": "La solicitud puede atenderse por el procedimiento habitual.",
+    "revision": "Falta información o existen señales contradictorias."
+  }
+}

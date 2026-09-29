@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+outputs/
+*.safetensors
+*.pt
+*.gguf
+*.onnx
+*.log
+.cache/
