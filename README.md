@@ -84,3 +84,17 @@ tensores e historial; se rechaza reanudar con datos cambiados. Los informes de
 la prueba sintética pequeña dan 3/6 antes y después: no demuestran mejora de calidad.
 La verificación principal usa mode=head; mode=full es una opción avanzada todavía
 sin una prueba completa de integración y no se recomienda como ruta inicial.
+
+## Guía web en tres idiomas
+
+La guía de GitHub Pages está disponible en [español](https://mauricioperera.github.io/julia-finetune-workspace/),
+[inglés](https://mauricioperera.github.io/julia-finetune-workspace/en/) y
+[portugués](https://mauricioperera.github.io/julia-finetune-workspace/pt/).
+Cada idioma incluye instrucciones para la IA y evidencia de verificación traducidas.
+
+Para actualizar la página, edita `docs/index.html` y las traducciones en
+`docs/translations.json`, y ejecuta `python scripts/build_site.py`.
+El generador falla si falta la traducción de un texto de la página.
+Los documentos `prompt.md` y `verification.md` de cada idioma se mantienen
+manualmente. Publica los archivos generados junto con los cambios de origen;
+GitHub Pages sirve `/docs` desde `main`.

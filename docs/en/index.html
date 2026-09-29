@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Adapt Julia to your decisions with examples and AI assistance. A local fine-tuning tool for people without coding knowledge.">
+  <meta name="theme-color" content="#132d2b">
+  <meta property="og:title" content="Julia · teach your rules">
+  <meta property="og:description" content="From your examples to a decision model. AI-assisted setup, local training and verifiable results.">
+  <title>Julia Fine-tuning · Teach your rules</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../script.js" defer></script>
+  <link rel="canonical" href="https://mauricioperera.github.io/julia-finetune-workspace/en/">
+  <link rel="alternate" hreflang="es" href="https://mauricioperera.github.io/julia-finetune-workspace/">
+  <link rel="alternate" hreflang="en" href="https://mauricioperera.github.io/julia-finetune-workspace/en/">
+  <link rel="alternate" hreflang="pt" href="https://mauricioperera.github.io/julia-finetune-workspace/pt/">
+  <link rel="alternate" hreflang="x-default" href="https://mauricioperera.github.io/julia-finetune-workspace/">
+</head>
+<body>
+  <a class="skip" href="#contenido">Skip to content</a>
+  <header class="shell topbar">
+    <a class="brand" href="#"><span class="mark" aria-hidden="true">j.</span>Julia <span class="brand-sub">fine-tuning</span></a>
+    <nav aria-label="Main navigation"><a href="#como">How it works</a><a href="#ejemplos">Your examples</a><a href="#empezar">Get started</a></nav>
+    <div class="header-tools"><select class="language-switch" aria-label="Language"><option value="../">Español</option><option value="./" selected>English</option><option value="../pt/">Português</option></select><a class="repo" href="https://github.com/MauricioPerera/julia-finetune-workspace">GitHub ↗</a></div>
+  </header>
+  <main id="contenido">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> First release · local training</p>
+        <h1>Your rules.<br>Your examples.<br><em>Julia learns.</em></h1>
+        <p class="intro">Adapt a compact model to classify text by your rules. An AI agent helps you install the tool, prepare examples and check the results.</p>
+        <div class="actions"><a class="button primary" href="#empezar">Start with my AI <span>↗</span></a><a class="button secondary" href="#como">Learn how first ↓</a></div>
+        <p class="small-note">No coding required. Your AI agent must be able to create files and run commands on your computer.</p>
+      </div>
+      <div class="demo" aria-label="Illustrative classification example">
+        <div class="demo-header"><span class="dot"></span> An example from your business <span class="tag">illustrative</span></div>
+        <div class="message"><span class="mini-label">MESSAGE</span><p>“The system is down and nobody can process orders.”</p></div>
+        <div class="connector" aria-hidden="true">↓</div>
+        <div class="criteria"><span class="mini-label">YOUR RULE</span><p>An operational outage needs immediate attention.</p></div>
+        <div class="connector" aria-hidden="true">↓</div>
+        <div class="decision"><span class="mini-label">EXPECTED DECISION</span><strong><span></span>Urgent</strong></div>
+        <div class="demo-footer">You define what is correct.<br>Training adjusts how the model decides.</div>
+      </div>
+    </section>
+    <section class="factbar shell" aria-label="Features"><div><strong>Compact</strong><span>Julia-1 has 144.3 M parameters</span></div><div><strong>No GPU required</strong><span>Initial setup tested on CPU</span></div><div><strong>With evidence</strong><span>Compare the model before and after</span></div></section>
+    <section class="section shell" id="como">
+      <div class="section-heading"><p class="eyebrow">WHAT TRAINING MEANS</p><h2>Learn to choose<br>by your rules.</h2><p>Fine-tuning adapts an existing model using examples with a correct answer. Julia chooses from the options you define; it does not write free-form responses.</p></div>
+      <div class="steps"><article><span class="step">01</span><h3>Define the decision</h3><p>Write the question and what each category means. For example: urgent, normal and review.</p></article><article><span class="step">02</span><h3>Teach with examples</h3><p>Provide texts and the correct category. The AI agent helps organize the file and spot ambiguities.</p></article><article><span class="step">03</span><h3>Train and compare</h3><p>The tool adapts Julia and checks its behavior on examples kept separate from training.</p></article></div>
+      <div class="callout"><span aria-hidden="true">↳</span><p><strong>The original model is preserved.</strong> The result is a fine-tuned copy you can test before deciding whether to use it.</p></div>
+    </section>
+    <section class="dataset-section" id="ejemplos"><div class="shell dataset-grid">
+      <div><p class="eyebrow">THE STARTING POINT</p><h2>A simple table.<br>One answer per case.</h2><p>You can start with a spreadsheet. The essentials are the text and the correct category. An agent converts the file into the format the trainer needs.</p><a class="text-link" href="https://github.com/MauricioPerera/julia-finetune-workspace/blob/main/examples/synthetic.csv">View synthetic examples ↗</a></div>
+      <div class="table-card"><div class="table-top"><span class="file-icon" aria-hidden="true">▤</span> examples.csv <span>ILLUSTRATIVE PREVIEW</span></div><div class="table-scroll"><table><caption class="sr-only">Fictional examples and expected categories</caption><thead><tr><th scope="col">Text</th><th scope="col">Answer</th></tr></thead><tbody><tr><td>Nobody can access the system.</td><td><span class="pill urgent">urgent</span></td></tr><tr><td>Update the document when you can.</td><td><span class="pill normal">normal</span></td></tr><tr><td>The impact of the failure still needs confirmation.</td><td><span class="pill review">review</span></td></tr></tbody></table></div><p>The data shown is fictional. Categories should reflect your business rules.</p></div>
+    </div></section>
+    <section class="section shell data-details"><article><span class="mini-label">NO DATA YET?</span><h3>You can create synthetic examples.</h3><p>AI can help generate cases, and you review the answers. They are useful for getting started; later, you need real cases set aside to measure performance in your setting.</p></article><article><span class="mini-label">MULTIPLE LANGUAGES?</span><h3>Include them in the evaluation.</h3><p>Julia starts from a multilingual model. Fine-tuning it for a task does not guarantee preserved performance in every language. Separate and compare results by language.</p></article></section>
+    <section class="start-section shell" id="empezar">
+      <div class="section-heading"><p class="eyebrow">ASSISTED SETUP</p><h2>Copy the message.<br>Your AI sets things up.</h2><p>Open an AI agent with access to your terminal and files, such as a coding agent. Paste this message and let it follow the setup and verification procedure.</p></div>
+      <div class="prompt-card"><div class="prompt-top"><span>MESSAGE FOR YOUR AI</span><button id="copy-prompt" type="button">Copy instructions <span aria-hidden="true">⧉</span></button></div><pre id="agent-prompt">Read and follow this prompt to install and verify my Julia fine-tuning tool. Then help me prepare my examples. Respond in English:
+
+https://mauricioperera.github.io/julia-finetune-workspace/en/prompt.md</pre><p id="copy-status" role="status" aria-live="polite">The AI will download a fixed release and verify the first training run.</p></div>
+      <div class="requirements"><p><strong>You need</strong> a Windows or Linux computer, space for the model and its environment, internet for setup and an AI agent that can run commands.</p><p><strong>The AI handles</strong> checking Python, creating the isolated environment and reading the results. If something is missing, it explains the obstacle.</p></div>
+      <div class="start-links"><a class="text-link" href="prompt.md">Read the full prompt ↗</a><a class="text-link" href="https://github.com/MauricioPerera/julia-finetune-workspace/releases/tag/v0.1.0">Download version 0.1.0 ↗</a><a class="text-link" href="https://mauricioperera.github.io/portable-agent-workspace-template/">Explore the optional workspace ↗</a></div>
+    </section>
+    <section class="section shell evidence-section">
+      <div><p class="eyebrow">WHAT HAS BEEN VERIFIED</p><h2>It works.<br>Measure the improvement.</h2></div>
+      <div class="evidence-copy"><p>We tested isolated setup, training with real weights, saving, reloading and recovery after interrupting the process. The optional workspace integration works on Windows and Linux.</p><div class="result"><span>SMALL SYNTHETIC TEST</span><strong>3/6 <small>before</small><span aria-hidden="true">→</span>3/6 <small>after</small></strong><p>It confirmed the tool works. It did not demonstrate improved accuracy.</p></div><p class="small-note">The verified path trains the decision components on CPU. There is no measurement on real data from your niche or guarantee of preserving all languages.</p><a class="text-link" href="verification.md">Read the evidence and its limits ↗</a></div>
+    </section>
+    <section class="section shell faq"><p class="eyebrow">COMMON QUESTIONS</p><h2>Before you start.</h2><details><summary>Do I need a powerful graphics card?</summary><p>Not for the initial setup: CPU training has been tested. Time and memory requirements depend on dataset size and text length. The agent will check the available resources.</p></details><details><summary>Does training happen on this page?</summary><p>No. This page explains the process and provides instructions. Training runs on your computer using Python and PyTorch.</p></details><details><summary>What can this version learn?</summary><p>Selection decisions: classifying text into categories you define, such as priority or the responsible department. It does not turn Julia into a chatbot or add free-form text generation.</p></details><details><summary>Does my data leave my computer?</summary><p>The trainer runs locally and does not send examples to a training API. If your AI assistant is an external service and you give it file access, how that data is handled depends on that service.</p></details><details><summary>Does the AI decide which answers are correct?</summary><p>It can suggest examples and flag inconsistencies. Rules and labels must reflect your decisions. An invented or ambiguous answer can teach the wrong behavior.</p></details><details><summary>Do I need to install the workspace?</summary><p>It is optional. The tool works on its own. The workspace stores instructions, procedures and evidence so another AI session can continue the work.</p></details></section>
+  </main>
+  <footer class="shell"><a class="brand" href="#"><span class="mark" aria-hidden="true">j.</span>Julia fine-tuning</a><p>Independent tool · Not affiliated with Supersonic Labs.</p><div><a href="https://huggingface.co/SupersonicLabs/Julia-1">Julia-1 model ↗</a><a href="https://github.com/MauricioPerera/julia-finetune-workspace">Source code ↗</a></div></footer>
+</body>
+</html>
