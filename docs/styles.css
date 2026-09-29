@@ -25,5 +25,10 @@
 .tech-resources span{color:var(--muted)}
 .tech-resources a{overflow-wrap:anywhere}
 footer>div{flex-wrap:wrap}
+.topbar{flex-wrap:wrap}
+.topbar .site-nav{display:flex;flex-wrap:wrap;gap:12px 22px}
+.site-nav a[aria-current="page"]{font-weight:700;text-decoration:underline;text-underline-offset:6px}
+@media(max-width:1050px){.topbar .site-nav{order:3;width:100%;justify-content:center}.header-tools{margin-left:auto}}
+@media(max-width:650px){.topbar .site-nav{display:flex;justify-content:flex-start;font-size:13px;gap:12px 18px}}
 @media(max-width:900px){.tech-layout{grid-template-columns:minmax(0,1fr);gap:35px}.tech-toc{position:static;display:grid;grid-template-columns:1fr 1fr}.tech-hero{padding-top:45px}}
 @media(max-width:650px){.tech-toc{display:flex;width:100%;gap:10px}.tech-section h2{font-size:27px}.tech-section p{font-size:15px}.tech-layout{padding-bottom:30px}.topbar>.text-link{order:3;width:100%;font-size:12px}.tech-hero{padding:38px 0 30px}}

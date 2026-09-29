@@ -1,6 +1,7 @@
 """Generate the three static technical guides using only the standard library."""
 import html
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -164,6 +165,13 @@ for index, locale in enumerate(('es', 'en', 'pt')):
     description = localized(('Arquitectura, datos, CLI y verificación de Julia Fine-tuning v0.1.0.', 'Architecture, data, CLI and verification for Julia Fine-tuning v0.1.0.', 'Arquitetura, dados, CLI e verificação de Julia Fine-tuning v0.1.0.'), index)
     language_label = localized(('Idioma', 'Language', 'Idioma'), index)
     options = ''.join(f'<option value="{("" if locale == "es" else "../") + ("" if code == "es" else code + "/") + "technical.html"}"{" selected" if code == locale else ""}>{name}</option>' for code, name in [('es','Español'),('en','English'),('pt','Português')])
+    # Reuse the localized landing header so both pages keep the same navigation.
+    landing = (folder / 'index.html').read_text(encoding='utf-8')
+    header = re.search(r'<header\b[^>]*>.*?</header>', landing, re.S).group(0)
+    header = header.replace(' aria-current="page"', '')
+    header = re.sub(r'href="#([^"]*)"', r'href="./#\1"', header)
+    header = header.replace('href="technical.html"', 'href="technical.html" aria-current="page"')
+    header = re.sub(r'<option.*?</select>', options + '</select>', header)
     alternatives = ''.join(f'<link rel="alternate" hreflang="{code}" href="{BASE}{"" if code in ("es","x-default") else code + "/"}technical.html">' for code in ('es','en','pt','x-default'))
     navigation = ''.join(f'<a href="#{key}">{localized(heading,index)}</a>' for key, heading, _ in SECTIONS)
     sections = []
@@ -199,8 +207,7 @@ for index, locale in enumerate(('es', 'en', 'pt')):
 <link rel="canonical" href="{BASE}{prefix}technical.html">{alternatives}
 <link rel="stylesheet" href="{asset}styles.css"><script src="{asset}script.js" defer></script></head>
 <body><a class="skip" href="#technical-content">{localized(('Saltar al contenido','Skip to content','Pular para o conteúdo'),index)}</a>
-<header class="shell topbar"><a class="brand" href="./"><span class="mark" aria-hidden="true">j.</span>Julia <span class="brand-sub">fine-tuning</span></a>
-<a class="text-link" href="./">{home} ↗</a><div class="header-tools"><select class="language-switch" aria-label="{language_label}">{options}</select><a class="repo" href="{REPO}">GitHub ↗</a></div></header>
+{header}
 <main id="technical-content" class="shell"><div class="tech-hero"><p class="eyebrow">{localized(('DOCUMENTACIÓN · V0.1.0','DOCUMENTATION · V0.1.0','DOCUMENTAÇÃO · V0.1.0'),index)}</p><h1>{title}</h1><p class="intro">{description}</p><div class="tech-badges"><span>Python ≥3.11</span><span>PyTorch · CPU</span><span>choice · head</span></div></div>
 <div class="tech-layout"><aside><nav class="tech-toc" aria-label="{localized(('Índice de documentación','Documentation contents','Índice da documentação'),index)}">{navigation}</nav></aside><div class="tech-body">{''.join(sections)}</div></div></main>
 <footer class="shell"><a class="text-link" href="./">← {home}</a><p>{localized(('Herramienta independiente · No afiliada a Supersonic Labs.','Independent tool · Not affiliated with Supersonic Labs.','Ferramenta independente · Sem afiliação com a Supersonic Labs.'),index)}</p><a class="text-link" href="{REPO}">GitHub ↗</a></footer></body></html>
